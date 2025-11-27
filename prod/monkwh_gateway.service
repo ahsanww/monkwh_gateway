@@ -1,0 +1,17 @@
+[Unit]
+Description=FastAPI Monkwh Gateway
+After=network.target
+
+[Service]
+User=mgi
+WorkingDirectory=/home/mgi/project/monkwh_gateway
+ExecStart=/home/mgi/project/monkwh_gateway/venv/bin/uvicorn \
+          main:app \
+          --host 0.0.0.0 \
+          --port 8000 \
+          --workers 2
+Restart=always
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
