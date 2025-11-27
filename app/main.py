@@ -28,7 +28,7 @@ app = FastAPI(title="MonKwh API", lifespan=lifespan, docs_url="/api/monkwh")
 # Redirect root (/) ke /docs
 @app.get("/", include_in_schema=False)
 async def root():
-    return RedirectResponse(url="/monkwh")
+    return RedirectResponse(url="/api/monkwh")
 
 
 # Include all routers
