@@ -48,7 +48,7 @@ async def getLoadProfile(id_pelanggan, meterNumber, tanggal: date, index: int):
 #     return respon
 
 
-@router.post("/monthlyProfile")
+@router.get("/monthlyProfile")
 async def getMonthlyProfile(id_pelanggan, meterNumber, tanggal: date):
     # dummy_data = [random.random()]
     indexData = 131

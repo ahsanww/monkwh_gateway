@@ -22,7 +22,7 @@ async def lifespan(app: FastAPI):
     print("Database pool closed")
 
 
-app = FastAPI(title="MonKwh API", lifespan=lifespan, docs_url="/monkwh")
+app = FastAPI(title="MonKwh API", lifespan=lifespan, docs_url="api/monkwh")
 
 
 # Redirect root (/) ke /docs
