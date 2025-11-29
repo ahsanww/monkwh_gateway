@@ -7,6 +7,7 @@ from app.core.service import (
     rawDataService,
     databaseService,
     dataService,
+    testService,
 )
 
 
@@ -36,7 +37,7 @@ app.include_router(downlinkService.router)
 app.include_router(rawDataService.router)
 app.include_router(databaseService.router)
 app.include_router(dataService.router)
-
+app.include_router(testService.router)
 # if __name__ == "__main__":
 #     import uvicorn
 

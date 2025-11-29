@@ -6,7 +6,7 @@ After=network.target
 User=mgi
 WorkingDirectory=/home/mgi/project/monkwh_gateway
 ExecStart=/home/mgi/project/monkwh_gateway/venv/bin/uvicorn \
-          main:app \
+          app.main:app \
           --host 0.0.0.0 \
           --port 8000 \
           --workers 2
